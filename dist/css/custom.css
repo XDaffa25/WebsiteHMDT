@@ -41,11 +41,11 @@
   background-color: white !important;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional bayangan */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
-/* Section */
+/* Section 1*/
 .sec1-txt1{
   color: #2e3a59;
 }
