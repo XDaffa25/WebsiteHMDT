@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Konfigurasi database
 $host = "localhost";
 $dbname = "hmdt";
 $dbuser = "root";
@@ -16,28 +17,29 @@ try {
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    // Ambil user dari DB
+    // Ambil user berdasarkan nama
     $stmt = $pdo->prepare("SELECT * FROM users WHERE nama = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($user && password_verify($password, $user['password'])) {
-    $_SESSION['username'] = $user['nama'];
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['role'] = $user['role']; // Tambahkan role
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['username'] = $user['nama'];
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['role'] = $user['role'];
 
-    // Redirect berdasarkan role
-    if ($user['role'] === 'admin') {
-        header("Location: admin_dashboard.php");
+        // Cek peran pengguna
+        if ($user['role'] === 'admin') {
+            header("Location: ../admin/index.php"); // Admin dashboard
+        } else {
+            header("Location: ../index.php"); // User biasa
+        }
+        exit();
     } else {
-        header("Location: welcome.html");
+        $error = "Nama atau password salah!";
     }
-    exit();
-}
-
 }
 ?>
 
@@ -52,9 +54,12 @@ if ($user && password_verify($password, $user['password'])) {
   <div class="login-container">
     <form method="POST" class="login-box">
       <h2>Login</h2>
-      <?php if ($error) echo "<p class='error'>$error</p>"; ?>
-      <input type="text" name="username" placeholder="Nama" required>
+      <?php if ($error): ?>
+        <p class="error"><?= htmlspecialchars($error) ?></p>
+      <?php endif; ?>
+      <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="Password" required>
+      <input type="email" name="email" placeholder="email" required>
       <button type="submit">Masuk</button>
       <p class="register-link">Belum punya akun? <a href="register.php">Daftar di sini</a></p>
     </form>

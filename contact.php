@@ -24,9 +24,9 @@ $is_logged_in = isset($_SESSION['user_id']);  // sesuaikan key session login kam
   <!-- Navigation -->
 <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
   <a href="index.php" class="hover:text-blue-600">Home</a>
-  <a href="#" class="hover:text-blue-600">About</a>
-  <a href="#" class="hover:text-blue-600">Student Info</a>
-  <a href="#" class="hover:text-blue-600">Articles</a>
+  <a href="about.php" class="hover:text-blue-600">About</a>
+  <a href="https://smb.telkomuniversity.ac.id/beasiswa/" target="_blank" class="hover:text-blue-600">Student Info</a>
+  <a href="https://telkomuniversity.ac.id/d3-teknologi-telekomunikasi/" target="_blank" class="hover:text-blue-600">Articles</a>
   <a href="contact.php" class="hover:text-blue-600">Contact</a>
 </nav>
 
@@ -34,10 +34,18 @@ $is_logged_in = isset($_SESSION['user_id']);  // sesuaikan key session login kam
   <!-- Buttons -->
   <div class="hidden md:flex space-x-3">
     <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Partnership</button>
-    <button class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900 transition">Visit Store</button>
+    <button class="btn"><a href="https://www.instagram.com/dtt.store_/" target="_blank">Visit Store</a></button>
   </div>
 </header>
-
+<?php if (isset($_GET['status'])): ?>
+  <div class="max-w-2xl mx-auto mt-4 text-center px-4">
+    <?php if ($_GET['status'] == 'sukses'): ?>
+      <div class="bg-green-100 text-green-800 px-4 py-2 rounded-md">Pesan berhasil dikirim!</div>
+    <?php else: ?>
+      <div class="bg-red-100 text-red-800 px-4 py-2 rounded-md">Gagal mengirim pesan. Pastikan semua data diisi.</div>
+    <?php endif; ?>
+  </div>
+<?php endif; ?>
 <body class="bg-gradient-to-b from-orange to-blue-50 text-gray-800 font-sans">
 
   <!-- Header Title -->
@@ -52,7 +60,7 @@ $is_logged_in = isset($_SESSION['user_id']);  // sesuaikan key session login kam
  <div class="relative rounded-lg p-8 w-full md:w-1/2 shadow-md overflow-hidden text-white">
   <!-- Layer gambar background -->
   <div class="absolute inset-0 bg-center bg-cover opacity-65" 
-       style="background-image: url('bg-contact.jpg');"></div>
+       style="background-image: url('image/Telkom.jpg');"></div>
 
   <!-- Layer semi-overlay agar teks tetap kontras (optional) -->
   <div class="absolute inset-0 bg-orange-900/40"></div>
@@ -84,14 +92,14 @@ $is_logged_in = isset($_SESSION['user_id']);  // sesuaikan key session login kam
     <!-- Contact Form -->
     <div class="bg-white rounded-lg p-8 mt-8 md:mt-0 w-full md:w-1/2 shadow-md">
       <h3 class="text-2xl font-bold text-orange-950 mb-6">Send us a message</h3>
-      <form class="space-y-4">
-        <div class="flex gap-4">
-          <input type="text" placeholder="Name" class="w-1/2 border border-gray-300 px-4 py-2 rounded-md" required>
-          <input type="text" placeholder="Phone" class="w-1/2 border border-gray-300 px-4 py-2 rounded-md" required>
-        </div>
-        <input type="email" placeholder="Email" class="w-full border border-gray-300 px-4 py-2 rounded-md" required>
-        <input type="text" placeholder="Subject" class="w-full border border-gray-300 px-4 py-2 rounded-md" required>
-        <textarea placeholder="Message" class="w-full border border-gray-300 px-4 py-2 rounded-md h-32" required></textarea>
+      <form action="php/kirim_pesan.php" method="POST" class="space-y-4">
+<div class="flex gap-4">
+  <input type="text" name="nama" placeholder="Name" class="w-1/2 border border-gray-300 px-4 py-2 rounded-md" required>
+  <input type="text" name="telepon" placeholder="Phone" class="w-1/2 border border-gray-300 px-4 py-2 rounded-md" required>
+</div>
+<input type="email" name="email" placeholder="Email" class="w-full border border-gray-300 px-4 py-2 rounded-md" required>
+<input type="text" name="subjek" placeholder="Subject" class="w-full border border-gray-300 px-4 py-2 rounded-md" required>
+<textarea name="pesan" placeholder="Message" class="w-full border border-gray-300 px-4 py-2 rounded-md h-32" required></textarea>
 <?php if ($is_logged_in): ?>  
   <button type="submit" class="w-full bg-orange-800 text-white py-2 rounded-md hover:bg-orange-900">SEND</button>
 <?php else: ?>

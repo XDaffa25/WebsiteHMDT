@@ -1,0 +1,118 @@
+/* Navbar layout dasar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px 32px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Kiri: Logo dan teks */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.logo-text .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo-text .subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Tengah: Navigasi */
+.navbar-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-nav a:hover {
+  color: #007bff;
+}
+
+/* Kanan: Tombol */
+.navbar-right {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:first-child {
+  background-color: #b56d00;
+  color: white;
+}
+
+.btn:last-child {
+  background-color: #b56d00;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu .btn {
+  background: none;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  border-radius: 0;
+  padding: 10px 16px;
+}
+
+.dropdown-menu .btn:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}

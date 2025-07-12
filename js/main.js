@@ -1,6 +1,4 @@
-<script>
-  function redirectToLogin() {
-    alert("Silakan login terlebih dahulu untuk mengirim pesan.");
-    window.location.href = "login.php";
-  }
-</script>
+function toggleDropdown() {
+  var menu = document.getElementById("dropdown-menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}

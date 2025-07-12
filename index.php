@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <?php include('php/navbar.php'); ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -38,37 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <header class="navbar">
-  <div class="navbar-container">
-    <!-- Kiri: Logo dan Teks -->
-    <div class="navbar-left">
-      <img src="image/gambar.jpg" alt="Logo HMDT" class="logo">
-      <div class="logo-text">
-        <div class="title">HMDT</div>
-        <div class="subtitle">Teknologi Telekomunikasi</div>
-      </div>
-    </div>
-
-    <!-- Tengah: Navigation -->
-    <nav class="navbar-nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Student Info</a>
-      <a href="#">Articles</a>
-      <a href="contact.php">Contact</a>
-    </nav>
-
-    <!-- Kanan: Tombol -->
-    <div class="navbar-right">
-      <button class="btn">Partnership</button>
-      <button class="btn"><a href="https://www.instagram.com/dtt.store_/">Visit Store</a></button>
-      <a href="php/login.php" class="btn btn-outline-secondary">Login</a>
-    </div>
-  </div>
-</header>
-
-
-
   <!-- Hero Section -->
 <section class="hero">
   <div class="hero-container">
@@ -97,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h4 class="video-subtitle">Who We Are</h4>
         <h2 class="video-title">Video Profile</h2>
         <p class="video-desc">
-          With the spirit of Empowering Inclusivity, BEM FEB UI is here to create a more inclusive space, empower every voice, and embrace diversity in all aspects of life.
+          With the spirit of Empowering Inclusivity, HMDT is here to create a more inclusive space, empower every voice, and embrace diversity in all aspects of life.
         </p>
         <a href="https://youtu.be/WpS9RMCMn5U?si=V59sjrr8UhlQc2ku" class="video-button" target="_blank">Discover More</a>
       </div>
@@ -147,12 +115,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Logo & Socials -->
     <div class="footer-section center">
-      <img src="image/logo.png" alt="HMDT" class="footer-logo">
+      <img src="image/logo.png" alt="HMDT" class="footer-logo" >
       <div class="social-icons">
-        <a href="https://x.com/infohmdt"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/infohmdt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@infohmdt_?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/infohmdt" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/infohmdt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@infohmdt_?is_from_webapp=1&sender_device=pc" target="_blank"s><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
 

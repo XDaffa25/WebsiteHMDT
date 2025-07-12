@@ -47,6 +47,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <input type="text" name="username" placeholder="Nama" required>
       <input type="text" name="nim" placeholder="NIM" required>
       <input type="password" name="password" placeholder="Password" required>
+      <input type="email" name="email" placeholder="email" required>
+      <input type="No.telepon" name="No.telepon" placeholder="No.telepon" required>
+      <!-- Tambahan input untuk role -->
+      <select name="role" required>
+        <option value="">Pilih peran</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
       <button type="submit">Register</button>
       <p class="link-text">Sudah punya akun? <a href="login.php">Login</a></p>
     </form>
