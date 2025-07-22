@@ -1,60 +1,77 @@
+<?php
+session_start();
+$is_logged_in = isset($_SESSION['user_id']);  // sesuaikan key session login kamu
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .nav-button {
+      background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+      border: 2px solid #FFA500;
+      color: white;
+      transition: all 0.3s ease;
+    }
+  .nav-button:hover {
+      background: white;
+      color: #FFA500;
+      border-color: 2px solid #FFA500;
+    }
+  </style>
 </head>
-<body>
-<footer class="footer">
-  <div class="footer-container">
+<footer class="bg-transparent text-gray-800 font-sans">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 px-6 py-10">
 
     <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">High Achiever</a></li>
-        <li><a href="#">Competition</a></li>
-        <li><a href="#">Scholarship</a></li>
+    <div class="flex-1 max-w-xs text-right">
+      <h4 class="font-bold mb-4 text-lg">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-blue-600">High Achiever</a></li>
+        <li><a href="#" class="hover:text-blue-600">Competition</a></li>
+        <li><a href="#" class="hover:text-blue-600">Scholarship</a></li>
       </ul>
     </div>
 
-    <!-- Logo & Social Media -->
-    <div class="footer-section center">
-      <img src="image/logo.png" alt="Logo HMDT" class="footer-logo">
-      <div class="social-icons">
-        <a href="https://x.com/infohmdt" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
+    <!-- Logo & Socials -->
+    <div class="flex flex-col items-center">
+      <img src="image/logo.png" alt="HMDT" class="w-20 h-20 rounded-full mb-4">
+      <div class="flex space-x-3 mt-2">
+        <a href="https://x.com/infohmdt" class="w-9 h-9 flex items-center justify-center rounded-full nav-button">
+        <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
+        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" class="w-9 h-9 flex items-center justify-center rounded-full nav-button">
+        <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.instagram.com/infohmdt" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/infohmdt" class="w-9 h-9 flex items-center justify-center rounded-full nav-button">
+        <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.tiktok.com/@infohmdt_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <i class="fab fa-tiktok"></i>
+        <a href="https://www.tiktok.com/@infohmdt" class="w-9 h-9 flex items-center justify-center rounded-full nav-button">
+        <i class="fab fa-tiktok"></i>
         </a>
+
       </div>
     </div>
 
     <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact Info</h4>
-      <ul>
-        <li><i class="fas fa-phone"></i> 081234567890 (Partnership)</li>
-        <li><i class="fas fa-comments"></i> 081234567890 (Organization & NGO)</li>
-        <li><i class="fas fa-envelope"></i> hmdt@gmail.com</li>
+    <div class="flex-1 max-w-xs text-left">
+      <h4 class="font-bold mb-4 text-lg">Contact Info</h4>
+      <ul class="space-y-2 text-sm">
+        <li><i class="fas fa-phone text-blue-500 mr-2"></i> 081234567890 (Partnership)</li>
+        <li><i class="fas fa-comments text-blue-500 mr-2"></i> 081234567890 (Organization & NGO)</li>
+        <li><i class="fas fa-envelope text-blue-500 mr-2"></i> hmdt@gmail.com</li>
       </ul>
     </div>
 
   </div>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 HMDT - All rights reserved.</p>
+  <div class="border-t border-gray-200 text-center text-sm py-4 text-gray-600 font-semibold">
+    &copy; 2025 HMDT - All rights reserved.
   </div>
 </footer>
 </body>

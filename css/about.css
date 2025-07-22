@@ -1,3 +1,4 @@
+/* === ABOUT SECTION === */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -6,8 +7,36 @@ body {
 }
 
 .about-section {
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 100%);
+  position: relative;
+  padding: 100px 20px;
+  min-height: 100vh;
+  
+  /* Background akan scroll normal (tidak fixed) */
+  background: 
+    linear-gradient(
+      to top,
+      rgba(255,255,255,0.92) 50%,
+      rgba(255,255,255,0.85) 60%,
+      rgba(255,255,255,0.6) 75%,
+      rgba(255,255,255,0) 900%
+    ),
+    url('../image/rektorat1.png') center/cover no-repeat;
+  
+  /* Hapus properti fixed dan sesuaikan size */
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  
+  /* Konten wrapper */
+  .about-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
 }
 
 .about-header {
@@ -16,12 +45,14 @@ body {
 }
 
 .about-header h1 {
+  font-family: serif;
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .about-header p {
+  font-family: sans-serif;
   font-size: 18px;
   color: #444;
   line-height: 1.5;
@@ -38,26 +69,30 @@ body {
 }
 
 .about-left {
-  flex: 1 1 55%;
+  flex: 1 1 38%;
 }
 
 .about-right {
-  flex: 1;
+  padding-top: 14%;
+  right: -10%;
+  flex: 1 1 55%;
   min-width: 300px;
   position: relative;
 }
 
-
 .about-image {
   width: 100%;
+  max-width: 550px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+
+
 .badge {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: 28%;
+  right: 10%;
   background: #fff;
   border-radius: 50%;
   width: 120px;
@@ -108,7 +143,6 @@ body {
 .mission-list {
   list-style: none;
   padding-left: 0;
-  color: #555;
 }
 
 .mission-list li {
@@ -117,180 +151,26 @@ body {
   position: relative;
 }
 
-.mission-list .icon {
-  position: absolute;
-  left: 0;
-  color: #F2C94C;
-  font-size: 16px;
-}
-
+/* === NAVBAR === */
 .navbar {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Kiri */
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 12px;
-}
-
-.logo-text .title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.logo-text .subtitle {
-  font-size: 12px;
-  color: #666;
-}
-
-/* Tengah: Nav link */
-.navbar-nav {
-  display: flex;
-  gap: 24px;
-}
-
-.navbar-nav a {
-  text-decoration: none;
+/* === FOOTER === */
+footer {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #333;
-  font-weight: 500;
-}
-
-.navbar-nav a:hover {
-  color: #007bff;
-}
-
-/* Kanan: Tombol */
-.navbar-right {
-  display: flex;
-  gap: 12px;
-}
-
-.btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:first-child {
-  background-color: #ffffff;
-  color: white;
-}
-
-.btn:last-child {
-  background-color: #ffffff;
-  color: white;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.footer {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-  margin-top: 50px;
-  font-family: sans-serif;
-  color: #333;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-  gap: 40px;
-}
-
-
-.footer-section {
-  flex: 1 1 250px;
-  margin: 10px;
-}
-
-.footer-section h4 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-.footer-section ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.footer-section ul li i {
-  margin-right: 8px;
-  color: #007BFF;
-}
-
-.footer-section ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  color: #007BFF;
-}
-
-.footer-logo {
-  margin-right: auto;
-  width: 70px;
-  height: 70px;
-  max-width: 90%;
-  border-radius: 100px;
-}
-
-.social-icons a {
-  display: flex;
-  justify-content: center;
-  display: inline-block;
-  background-color: #e08a01;
-  color: #fff;
-  text-align: center;
-  padding: 2px;
-  margin: 5px 3px;
-  border-radius: 50%;
-  font-size: 14px;
-  text-decoration: none;
-  width: 36px;
-  height: 20px;
-  line-height: 37px;
-}
-
-.social-icons a:hover {
-  background-color: #ac0000;
+  padding: 40px 20px;
+  margin-top: 60px;
 }
 
 .footer-bottom {
@@ -300,8 +180,4 @@ body {
   font-size: 13px;
   padding: 15px 10px;
   color: #555;
-}
-
-.center {
-  text-align: center;
 }

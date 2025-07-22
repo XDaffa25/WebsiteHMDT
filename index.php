@@ -41,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="hero">
   <div class="hero-container">
     <div class="hero-text">
-      <h1>Welcome to<br><span>Himpunan Mahasiswa Diploma Teknik Telekomunikasi</span></h1>
-      <p>Himpunan Mahasiswa Diploma Teknik Telekomunikasi atau bisa disingkat HMDT, merupakan sebuah Himpunan yang berada di prodi Teknik Telekomunikasi yang berada di Fakultas Ilmu Terapan</p>
+    <h2 class="hero-welcome">Welcome to<br><span>Himpunan Mahasiswa Diploma Teknik Telekomunikasi</span></h2>
+    <p><br>Himpunan Mahasiswa Diploma Teknik Telekomunikasi atau bisa disingkat HMDT, merupakan sebuah Himpunan yang berada di prodi Teknik Telekomunikasi yang berada di Fakultas Ilmu Terapan</p>
     </div>
     <div class="hero-img">
       <img src="image/rektorat1.png" alt="Gedung Bangkit" class="hero-image">
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="video-desc">
           With the spirit of Empowering Inclusivity, HMDT is here to create a more inclusive space, empower every voice, and embrace diversity in all aspects of life.
         </p>
-        <a href="https://youtu.be/WpS9RMCMn5U?si=V59sjrr8UhlQc2ku" class="video-button" target="_blank">Discover More</a>
+        <br><a href="https://youtu.be/WpS9RMCMn5U?si=V59sjrr8UhlQc2ku" class="video-button" target="_blank">Discover More</a>
       </div>
     </div>
   </section>
@@ -77,12 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="vision-mission-container">
       <div class="vision-mission-text">
         <h4 class="vision-mission-subtitle">Who We Are</h4>
-        <h2 class="vision-mission-title">Our Vision</h2>
+        <h2 class="vision-mission-title">Our Vision</h2><br>
         <p class="vision-mission-paragraph">
           Menjadi program vokasi unggul dalam riset terapan dan kewirausahaan pada tahun 2028 yang berperan aktif dalam pengembangan teknologi terapan di bidang Telekomunikasi Digital
         </p>
         <h2 class="vision-mission-title">Our Mission</h2>
-        <ul class="vision-mission-list">
+        <ul class="vision-mission-list"><br>
           <li>➤ Mengembangkan dan menyelenggarakan pendidikan vokasi berstandar Internasional di bidang Teknologi Telekomunikasi dan menghasilkan lulusan yang mampu mengembangkan profesionalisme dalam bidang Telekomunikasi Digital.</li>
           <li>➤ Mengembangkan, menghasilkan, menyebarluaskan, dan menerapkan teknologi dan inovasi terapan di bidang Teknologi Telekomunikasi Digital pada industri berstandar Internasional.</li>
           <li>➤ Mengembangkan kerjasama dengan industri dan masyarakat nasional dan internasional.</li>
@@ -100,46 +100,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </section>
 
-<footer class="footer">
-  <div class="footer-container">
-    
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">High Achiever</a></li>
-        <li><a href="#">Competition</a></li>
-        <li><a href="#">Scholarship</a></li>
-      </ul>
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-icon">
+      <i class="fas fa-phone-volume"></i>
     </div>
-
-    <!-- Logo & Socials -->
-    <div class="footer-section center">
-      <img src="image/logo.png" alt="HMDT" class="footer-logo" >
-      <div class="social-icons">
-        <a href="https://x.com/infohmdt" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/infohmdt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@infohmdt_?is_from_webapp=1&sender_device=pc" target="_blank"s><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact Info</h4>
-      <ul>
-        <li><i class="fas fa-phone"></i> 081234567890 (Partnership)</li>
-        <li><i class="fas fa-comments"></i> 081234567890 (Organization & NGO)</li>
-        <li><i class="fas fa-envelope"></i> hmdt@gmail.com</li>
-      </ul>
-    </div>
+    <h2 class="contact-title">Need further information? Don't hesitate to contact us!</h2>
+    <a href="contact.php" class="contact-button">Contact Us</a>
   </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 HMDT - All rights reserved.</p>
-  </div>
-</footer>
-
-
+</section>
+ 
+<?php include ('php/footer.php'); ?>
 </body>
 </html>

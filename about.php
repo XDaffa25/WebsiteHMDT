@@ -1,8 +1,7 @@
 <?php
 session_start();
 error_reporting(0); 
-include('php/navbar.php'); // Navbar dimasukkan dari file terpisah
-?>
+include('php/navbar.php'); ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -47,45 +46,6 @@ include('php/navbar.php'); // Navbar dimasukkan dari file terpisah
     </div>
   </div>
 </section>
-<footer class="footer">
-  <div class="footer-container">
-    
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">High Achiever</a></li>
-        <li><a href="#">Competition</a></li>
-        <li><a href="#">Scholarship</a></li>
-      </ul>
-    </div>
-
-    <!-- Logo & Socials -->
-    <div class="footer-section center">
-      <img src="image/logo.png" alt="HMDT" class="footer-logo">
-      <div class="social-icons">
-        <a href="https://x.com/infohmdt" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/infohmdt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@infohmdt_?is_from_webapp=1&sender_device=pc" target="_blank"s><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact Info</h4>
-      <ul>
-        <li><i class="fas fa-phone"></i> 081234567890 (Partnership)</li>
-        <li><i class="fas fa-comments"></i> 081234567890 (Organization & NGO)</li>
-        <li><i class="fas fa-envelope"></i> hmdt@gmail.com</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 HMDT - All rights reserved.</p>
-  </div>
-</footer>
-
+<?php include("php/footer.php") ?>
 </body>
 </html>
